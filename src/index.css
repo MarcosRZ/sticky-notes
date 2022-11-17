@@ -1,0 +1,92 @@
+:root {
+  --atlassian-blue: #0065FF;
+
+  --background: #EFEFEF;
+  --default-card-color: #DEEBFF;
+  --light-border-color: #CCC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.notes {
+  position: relative;
+  background-color: var(--background);
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  box-shadow: 0 0 15px black inset;
+}
+
+.draggable-container {
+  height: 100%;
+  width: 100%;
+}
+
+.draggable {
+  position: absolute;
+  background-color: var(--default-card-color);
+  box-shadow: 5px 5px 5px #999;
+  border-radius: 5px;
+  height: 100px;
+  width: 100px;
+  z-index: 1;
+  padding: 1rem;
+  border: 2px solid #EEE;
+}
+
+.drop-zone {
+  box-shadow: 0 0 15px #333 inset;
+  background-color: #ff00008d;
+  border-radius: 5px;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resizable {
+  resize: both;
+  overflow: auto;
+}
+
+.create-form {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: .25rem;
+  border: 1px solid var(--light-border-color);
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #333;
+  z-index: 3;
+  background: var(--background);
+}
+
+.create-form input[type="submit"] {
+  color: white;
+  background-color: var(--atlassian-blue);
+}
+
+.create-form input[type="color"] {
+  width: 100%;
+}
